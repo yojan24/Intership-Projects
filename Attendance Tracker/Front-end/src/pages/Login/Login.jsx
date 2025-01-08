@@ -21,7 +21,7 @@ function Login() {
   const submit = async (data) => {
     try {
       const result = await login(data).unwrap();
-      console.log(result);
+      // console.log(result);
 
       dispatch(setData({ ...result }));
       navigate("/profile");
