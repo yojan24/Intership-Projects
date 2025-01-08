@@ -27,6 +27,7 @@ function Login() {
       navigate("/profile");
       toast.success("login Successfully");
     } catch (err) {
+      console.log(err);
       toast.error(err?.data?.message || err.error, {
         autoClose: 1000,
       });
