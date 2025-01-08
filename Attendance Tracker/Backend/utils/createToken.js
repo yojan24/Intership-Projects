@@ -9,6 +9,8 @@ const generateToken = async (res, id) => {
     res.cookie("jwt", token, {
       httpOnly: true,
       secure: true,
+      sameSite: "None",
+      path: "/",
     });
   } catch (error) {
     console.log("Token generation error", error.message);
